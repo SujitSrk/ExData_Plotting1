@@ -16,7 +16,10 @@ plot(y$DTime, y$Global_active_power, type="l", xlab="", ylab="Global Active Powe
 plot(y$DTime, y$Sub_metering_1, type="l", ylim=c(0, max(y$Sub_metering_1,y$Sub_metering_2,y$Sub_metering_3)) ,xlab="", ylab="Energy Submetering")
 lines(y$DTime, y$Sub_metering_2, type="l", xlab="", ylab="",col="red")
 lines(y$DTime, y$Sub_metering_3, type="l", xlab="", ylab="",col="blue")
-legend("topright",  lty=1, col=c("black","red", "blue"), cex=0.7, legend=c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"))
+legend("topright",  lty=1, bty="n", lwd=2, 
+       cex=0.6,y.intersp=0.3,inset=0.05,# position and size legend to be visible 
+       col=c("black","red", "blue"), 
+       legend=c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"))
 
 #Third plot
 plot(y$DTime, y$Voltage, type="l",xlab="",ylab="Voltage")
