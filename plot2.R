@@ -7,7 +7,7 @@ y <- read.csv("2007_Feb01_02.csv")
 y$DTime <- paste (y$Date,y$Time,sep=" ")
 y$DTime = strptime(y$DTime, format="%Y-%m-%d %H:%M:%S")
 
-#Plot the Line
+#Plot the Line, note- y is read as numeric so need to convert as.numeric 
 plot(y$DTime, y$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
 
 ##Copy plot to file 

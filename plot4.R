@@ -22,10 +22,10 @@ legend("topright",  lty=1, bty="n", lwd=2,
        legend=c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"))
 
 #Third plot
-plot(y$DTime, y$Voltage, type="l",xlab="",ylab="Voltage")
+plot(y$DTime, y$Voltage, type="l",xlab="DateTime",ylab="Voltage")
 
 #Fourth plot
-plot(y$DTime, y$Global_reactive_power, type="l",xlab="", ylab="Global_reactive_power")
+plot(y$DTime, y$Global_reactive_power, type="l",xlab="DateTime", ylab="Global_reactive_power")
 
 #Copy plot to file
 dev.copy(png,filename="plot4.png");
